@@ -20,7 +20,7 @@ const OnePost = ({ postId }) => {
                 <CardActionArea>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Post ID: {postId}
+                            {post.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                             { post.text} 

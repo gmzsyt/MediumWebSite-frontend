@@ -9,6 +9,6 @@ export const store = configureStore({
     reducer: {
       user: userReducer,
       post: postReducer,
-      commnet: commentReducer
+      comment: commentReducer
     },
   });  
