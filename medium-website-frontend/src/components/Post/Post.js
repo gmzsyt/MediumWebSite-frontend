@@ -4,8 +4,11 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate} from 'react-router-dom'
+
 
 function Post() {
+    const navigate = useNavigate();
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [postList, setPostList] = useState([]);
@@ -34,23 +37,25 @@ function Post() {
         return (
             <div>
                 {postList.map(post => (
-                    <Card key={post.id} sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                User name: {post.userName}
-                                {console.log(post.userName)}
-                            </Typography>
-                            <Typography variant="h5" component="div">
-                                {post.title}
-                            </Typography>
-                            <Typography variant="body2">
-                                {post.text}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small">Learn More</Button>
-                        </CardActions>
-                    </Card>
+                    <div key={post.id} style={{ marginBottom: '20px' }}>
+                        <Card sx={{ minWidth: 275 }}>
+                            <CardContent>
+                                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                    User name: {post.userName}
+                                    {console.log(post.userName)}
+                                </Typography>
+                                <Typography variant="h5" component="div">
+                                    {post.title}
+                                </Typography>
+                                <Typography variant="body2">
+                                    {post.text}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small" onClick={()=> navigate(`postDetail/${post.id}`)}>Learn More</Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 ))}
             </div>
         );
