@@ -15,23 +15,23 @@ const CommentOnePost = ({ postId }) => {
     }, [dispatch, postId]);
 
     return (
-        <div>
-            <Card sx={{ maxWidth: 600 ,marginRight: 10}}>
-                <CardActionArea>
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Comments
-                        </Typography>
-                        {comments.map(comment => (
-                            <div key={comment.id}>
+        <div > 
+        <Typography gutterBottom variant="h5" component="div" style={{marginBottom: '40px'}}>
+                                    Comments
+                                </Typography>
+            {comments.map(comment => (
+                <div key={comment.id} style={{ marginBottom: '40px' }}>
+                    <Card sx={{ maxWidth: 600 ,marginRight: 10}}>
+                        <CardActionArea>
+                            <CardContent>
                                 <Typography variant="body2" color="text.secondary">
                                     {comment.text}
                                 </Typography>
-                            </div>
-                        ))}
-                    </CardContent>
-                </CardActionArea>
-            </Card>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </div>
+            ))}
         </div>
     );
 };

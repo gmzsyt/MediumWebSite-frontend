@@ -42,7 +42,6 @@ function Post() {
                             <CardContent>
                                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                     User name: {post.userName}
-                                    {console.log(post.userName)}
                                 </Typography>
                                 <Typography variant="h5" component="div">
                                     {post.title}
