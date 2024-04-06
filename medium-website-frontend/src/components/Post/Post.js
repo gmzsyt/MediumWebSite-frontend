@@ -56,6 +56,7 @@ function Post() {
                                     </Typography>
                                 </div>
                                 <Typography style={{ display: 'flex', justifyContent: 'start', marginTop: '10px', marginLeft:'20px' }} variant="body2">
+
                                     {post.text}
                                 </Typography>
                             </CardContent>
