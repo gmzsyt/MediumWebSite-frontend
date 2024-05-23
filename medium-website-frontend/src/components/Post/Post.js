@@ -27,7 +27,7 @@ const Post = ({postList}) => {
                                     <div style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
                                         <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
                                         <Typography variant="h6" component="div" style={{ marginLeft: '10px' }}>
-                                            User name
+                                            {post.userName}
                                         </Typography>
                                     </div>
                                     <Typography style={{ display: 'flex', justifyContent: 'start', marginTop: '20px', marginLeft:'20px' }} variant="h5" component="div">
